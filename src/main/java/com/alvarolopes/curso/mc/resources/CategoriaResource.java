@@ -3,6 +3,8 @@ package com.alvarolopes.curso.mc.resources;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.aspectj.weaver.ast.Test;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +13,7 @@ import com.alvarolopes.curso.mc.domain.Categoria;
 
 @RestController
 @RequestMapping(value="/ Categorias")
+@EnableJpaRepositories(basePackageClasses=Test.class)
 public class CategoriaResource {
 
 	@RequestMapping(method=RequestMethod.GET)
